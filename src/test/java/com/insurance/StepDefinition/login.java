@@ -30,9 +30,13 @@ public class login extends Base{
 	@Given("user launches the Application {string}")
 	public void user_launches_the_application(String url) {
     try{
-		baseclass.appLaunch(url);}
-	catch(Exception e) {
-	e.printStackTrace();}
+		baseclass.appLaunch(url);
+		
+    }
+	catch(Exception e)
+    {
+	e.printStackTrace();
+	}
 	}
 
 	@When("user clicks product option")
@@ -41,7 +45,8 @@ public class login extends Base{
 		baseclass.mouseOver(Locators.getBtn());
 		}
 		catch(Exception e) {
-			e.printStackTrace();}
+			e.printStackTrace();
+			}
 	}
 		
 	@Then("user click insurance plan option")
@@ -50,7 +55,8 @@ public class login extends Base{
 		baseclass.mouseOver(Locators.getInsurance());
 		}
 	catch(Exception e) {
-		e.printStackTrace();}
+		e.printStackTrace();
+		}
 }
 
 	@Then("user click endownment button")
@@ -59,7 +65,8 @@ public class login extends Base{
 		baseclass.button(Locators.getEndown());
 		}
 		catch(Exception e) {
-			e.printStackTrace();}
+			e.printStackTrace();
+			}
 	}
 
 	@Then("user select the LIC Single Premium Endowment Plan")
@@ -68,7 +75,8 @@ public class login extends Base{
 		baseclass.button(Locators.getPlan());
 		}
 		catch(Exception e) {
-			e.printStackTrace();}
+			e.printStackTrace();
+			}
 	}
 
 	@Then("user choose sales brochure")
@@ -77,7 +85,8 @@ public class login extends Base{
 		baseclass.button(Locators.getSales());
 		}
 		catch(Exception e) {
-			e.printStackTrace();}
+			e.printStackTrace();
+			}
 	}
 	@When("user choose a product button")
 	public void user_choose_a_product_button() {
@@ -85,7 +94,8 @@ public class login extends Base{
 		baseclass.mouseOver(Locators.getButton());
 		}
 		catch(Exception e) {
-			e.printStackTrace();}
+			e.printStackTrace();
+			}
 	}
 
 	@Then("user select insurance plan")
@@ -94,7 +104,8 @@ public class login extends Base{
 		baseclass.mouseOver(Locators.getInsur());
 		}
 		catch(Exception e) {
-			e.printStackTrace();}
+			e.printStackTrace();
+			}
 	}
 
 	@Then("user click endownment plan option")
@@ -104,7 +115,8 @@ public class login extends Base{
 
 	}
 		catch(Exception e) {
-			e.printStackTrace();}
+			e.printStackTrace();
+			}
 	}
 
 	@Then("user select the LIC new Endownment Plan")
@@ -114,7 +126,8 @@ public class login extends Base{
 
 	}
 		catch(Exception e) {
-			e.printStackTrace();}
+			e.printStackTrace();
+			}
 	}
 
 	@Then("user select Policy document")
@@ -124,7 +137,8 @@ public class login extends Base{
 
 	}
 		catch(Exception e) {
-			e.printStackTrace();}
+			e.printStackTrace();
+			}
 	}
 
 	@When("user select product option")
@@ -133,7 +147,8 @@ public class login extends Base{
 		baseclass.mouseOver(Locators.getChoose());
 		}
 		catch(Exception e) {
-			e.printStackTrace();}
+			e.printStackTrace();
+			}
 	}
 
 	@Then("user click Unit Linked plan button")
@@ -142,7 +157,8 @@ public class login extends Base{
 		baseclass.button(Locators.getUnit());
 		}
 		catch(Exception e) {
-			e.printStackTrace();}
+			e.printStackTrace();
+			}
 	}
 
 	@Then("user click LIC Nivesh plan")
@@ -151,17 +167,29 @@ public class login extends Base{
 		baseclass.button(Locators.getNivesh());
 		}
 		catch(Exception e) {
-			e.printStackTrace();}
+			e.printStackTrace();
+			}
+	}
+	@Then("user select sales brochure from Unit Linked Plan")
+	public void user_select_sales_brochure_from_unit_linked_plan() {
+		try {
+			baseclass.button(Locators.getSelectsales());
+			}
+			catch(Exception e) {
+				e.printStackTrace();
+				} 
 	}
 
-	@Then("user select sales brochure from UNit Linked Plan")
-	public void user_select_sales_brochure_from_u_nit_linked_plan() {
-		try {
-		baseclass.button(Locators.getSelectsales());
-		}
-		catch(Exception e) {
-			e.printStackTrace();}
-	}
+
+//	@Then("user select sales brochure from UNit Linked Plan")
+//	public void user_select_sales_brochure_from_unit_linked_plan() {
+//		try {
+//		baseclass.button(Locators.getSelectsales());
+//		}
+//		catch(Exception e) {
+//			e.printStackTrace();
+//			}
+//	}
 
 	@When("user click the product button")
 	public void user_click_the_product_button() {
@@ -169,7 +197,8 @@ public class login extends Base{
 		baseclass.mouseOver(Locators.getBtn());
 	}
 		catch(Exception e) {
-			e.printStackTrace();}
+			e.printStackTrace();
+			}
 	}
 
 	@Then("user clicks term insurance plan")

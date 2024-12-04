@@ -22,8 +22,6 @@ public class Base {
 	public static Actions action;
 	//public static JavascriptExecutor js;
 	
-	
-	
 	public void launchBrowser()
 	{
 		 
@@ -38,16 +36,19 @@ public class Base {
 	}
 	
 	//webelementmethods
-		public void button(WebElement element) {
+		public void button(WebElement element) 
+		{
 			element.click();
 		}
 	//webdriver methods
-		public void appLaunch(String url) {
+		public void appLaunch(String url) 
+		{
 			driver.get(url);
 			
 		}
 		
-		public void mouseOver(WebElement ele) {
+		public void mouseOver(WebElement ele) 
+		{
 			action.moveToElement(ele).build().perform();
 			
 		}

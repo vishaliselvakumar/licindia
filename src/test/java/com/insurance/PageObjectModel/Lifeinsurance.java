@@ -55,7 +55,7 @@ public class Lifeinsurance extends Base{
    @FindBy(xpath="//a[@href='/en/web/guest/lic-s-index-plus-873-512l354v01']")
    private WebElement nivesh;
    
-   @FindBy(xpath=" //a[text()=' Sales Brochures ']")
+   @FindBy(xpath=" //a[text()=' Sales Brochures '] ")
    private WebElement selectsales;
    
    @FindBy(xpath="//a[@title='Products']")

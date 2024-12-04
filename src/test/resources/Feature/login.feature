@@ -5,7 +5,7 @@ Background: User launches the insurance application
 Given user launches the Application "https://licindia.in/en"
 
 
-Scenario: Testing the functinality of Endownment plans
+Scenario: Testing the functionality of Endownment plans
 When user clicks product option
 Then user click insurance plan option
 And user click endownment button
@@ -25,7 +25,7 @@ Scenario: Testing the fuctionality of Unit Linked Plan
 When user select product option
 Then user click Unit Linked plan button
 And user click LIC Nivesh plan
-Then user select sales brochure from UNit Linked Plan
+Then user select sales brochure from Unit Linked Plan
 
 
 Scenario: Testing the functionality of term assurance plan

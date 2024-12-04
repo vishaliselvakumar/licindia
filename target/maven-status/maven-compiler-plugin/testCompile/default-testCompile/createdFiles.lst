@@ -1,0 +1,5 @@
+com\insurance\BaseClass\Base.class
+com\insurance\main\TestRunner.class
+com\insurance\StepDefinition\login.class
+com\insurance\PageObjectModel\Lifeinsurance.class
+com\insurance\StepDefinition\Hooks.class

@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html>
+<head>
+  
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript" src="js/jquery.tablesorter.min.js"></script>
+<script type="text/javascript" src="js/Chart.min.js"></script>
+<script type="text/javascript" src="js/moment.min.js"></script>
+<script type="text/javascript" src="js/bootstrap.min.js"></script>
+
+<link rel="stylesheet" href="css/bootstrap.min.css" type="text/css"/>
+<link rel="stylesheet" href="css/cucumber.css" type="text/css"/>
+<link rel="stylesheet" href="css/font-awesome.min.css"/>
+<link rel="shortcut icon" href="images/favicon.png"/>
+
+<script type="text/javascript">
+$(document).ready(function() {
+    // this will tell tablesorter to try looking for the data-value attribute
+    // if present, it'll sort by that instead
+    // otherwise, it'll sort by the text content of the table cell
+    $("#tablesorter").tablesorter({
+        textAttribute: 'data-value',
+        // ignores the first row of the header, the 'scenario', 'steps', since
+        // sorting those doesn't make sense
+        selectorHeaders: '> thead tr:not(.dont-sort) th',
+        // use a stable sort
+        sortStable: true
+    });
+});
+</script>
+
+
+
+
+
+
+
+
+
+
+
+  
+<title>Cucumber Reports (no 2.0) - Steps Overview</title>
+
+</head>
+<body>
+
+<nav class="navbar navbar-default navbar-fixed-top" id="navigation">
+  <div class="container-fluid">
+    <div class="collapse navbar-collapse">
+      <p class="navbar-text navbar-left">Cucumber Report</p>
+      <ul class="nav navbar-nav navbar-right">
+                <li role="presentation" ><a href="overview-features.html">Features</a></li>
+        <li role="presentation" ><a href="overview-tags.html">Tags</a></li>
+        <li role="presentation"     class="active" ><a href="overview-steps.html">Steps</a></li>
+                <li role="presentation" ><a href="overview-failures.html">Failures</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+<div class="container-fluid">
+  <div class="col-md-5 col-md-offset-1">
+    
+<table class="table table-bordered" id="build-info">
+  <thead>
+    <tr>
+      <th>Project</th>
+              <th>Number</th>
+            <th>Date</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr class="info">
+      <td>Insurance1</td>
+              <td>2.0</td>
+            <td>04 Dec 2024, 12:22</td>
+    </tr>
+  </tbody>
+</table>
+
+  </div>
+  <div class="col-md-3 col-md-offset-2">
+      </div>
+</div>
+
+
+<div id="report-lead" class="container-fluid">
+  <div class="col-md-10 col-md-offset-1">
+    <h2>Steps Statistics</h2>
+          <p>The following graph shows step statistics for this build. Below list is based on results.
+ step does not provide information about result then is not listed below.
+ Additionally @Before and @After are not counted because they are part of the scenarios, not steps.</p>
+      </div>
+</div>
+
+<div class="container-fluid" id="report">
+  <div class="row">
+    <div class="col-md-10 col-md-offset-1">
+      <table id="tablesorter" class="stats-table table-hover">
+
+        <thead>
+          <tr class="header">
+            <th>Implementation</th>
+            <th>Occurrences</th>
+            <th>Average duration</th>
+            <th>Max duration</th>
+            <th>Total durations</th>
+            <th>Ratio</th>
+          </tr>
+        </thead>
+
+        <tbody>
+                      <tr>
+              <td class="location">com.insurance.StepDefinition.Hooks.method()</td>
+              <td>4</td>
+              <td class="duration" data-value="3865924100">3.865</td>
+              <td class="duration" data-value="3865924100">4.768</td>
+              <td class="duration" data-value="15463696400">15.463</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">com.insurance.StepDefinition.login.click_lic_digi_term_plan()</td>
+              <td>1</td>
+              <td class="duration" data-value="13885700">0.013</td>
+              <td class="duration" data-value="13885700">0.013</td>
+              <td class="duration" data-value="13885700">0.013</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">com.insurance.StepDefinition.login.user_choose_a_product_button()</td>
+              <td>1</td>
+              <td class="duration" data-value="280921300">0.280</td>
+              <td class="duration" data-value="280921300">0.280</td>
+              <td class="duration" data-value="280921300">0.280</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">com.insurance.StepDefinition.login.user_choose_sales_brochure()</td>
+              <td>1</td>
+              <td class="duration" data-value="10066113600">10.066</td>
+              <td class="duration" data-value="10066113600">10.066</td>
+              <td class="duration" data-value="10066113600">10.066</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">com.insurance.StepDefinition.login.user_click_endownment_button()</td>
+              <td>1</td>
+              <td class="duration" data-value="170639500">0.170</td>
+              <td class="duration" data-value="170639500">0.170</td>
+              <td class="duration" data-value="170639500">0.170</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">com.insurance.StepDefinition.login.user_click_endownment_plan_option()</td>
+              <td>1</td>
+              <td class="duration" data-value="216496200">0.216</td>
+              <td class="duration" data-value="216496200">0.216</td>
+              <td class="duration" data-value="216496200">0.216</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">com.insurance.StepDefinition.login.user_click_insurance_plan_option()</td>
+              <td>1</td>
+              <td class="duration" data-value="178000700">0.178</td>
+              <td class="duration" data-value="178000700">0.178</td>
+              <td class="duration" data-value="178000700">0.178</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">com.insurance.StepDefinition.login.user_click_lic_nivesh_plan()</td>
+              <td>1</td>
+              <td class="duration" data-value="7175784600">7.175</td>
+              <td class="duration" data-value="7175784600">7.175</td>
+              <td class="duration" data-value="7175784600">7.175</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">com.insurance.StepDefinition.login.user_click_the_product_button()</td>
+              <td>1</td>
+              <td class="duration" data-value="169170800">0.169</td>
+              <td class="duration" data-value="169170800">0.169</td>
+              <td class="duration" data-value="169170800">0.169</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">com.insurance.StepDefinition.login.user_click_unit_linked_plan_button()</td>
+              <td>1</td>
+              <td class="duration" data-value="255396200">0.255</td>
+              <td class="duration" data-value="255396200">0.255</td>
+              <td class="duration" data-value="255396200">0.255</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">com.insurance.StepDefinition.login.user_clicks_product_option()</td>
+              <td>1</td>
+              <td class="duration" data-value="218442500">0.218</td>
+              <td class="duration" data-value="218442500">0.218</td>
+              <td class="duration" data-value="218442500">0.218</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">com.insurance.StepDefinition.login.user_clicks_term_insurance_plan()</td>
+              <td>1</td>
+              <td class="duration" data-value="16282800">0.016</td>
+              <td class="duration" data-value="16282800">0.016</td>
+              <td class="duration" data-value="16282800">0.016</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">com.insurance.StepDefinition.login.user_launches_the_application(java.lang.String)</td>
+              <td>4</td>
+              <td class="duration" data-value="17972816575">17.972</td>
+              <td class="duration" data-value="17972816575">56.341</td>
+              <td class="duration" data-value="71891266300">1:11.891</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">com.insurance.StepDefinition.login.user_selcts_the_term_assurance_plan()</td>
+              <td>1</td>
+              <td class="duration" data-value="19010100">0.019</td>
+              <td class="duration" data-value="19010100">0.019</td>
+              <td class="duration" data-value="19010100">0.019</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">com.insurance.StepDefinition.login.user_select_insurance_plan()</td>
+              <td>1</td>
+              <td class="duration" data-value="187723900">0.187</td>
+              <td class="duration" data-value="187723900">0.187</td>
+              <td class="duration" data-value="187723900">0.187</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">com.insurance.StepDefinition.login.user_select_policy_document()</td>
+              <td>1</td>
+              <td class="duration" data-value="11526072800">11.526</td>
+              <td class="duration" data-value="11526072800">11.526</td>
+              <td class="duration" data-value="11526072800">11.526</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">com.insurance.StepDefinition.login.user_select_product_option()</td>
+              <td>1</td>
+              <td class="duration" data-value="10905486200">10.905</td>
+              <td class="duration" data-value="10905486200">10.905</td>
+              <td class="duration" data-value="10905486200">10.905</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">com.insurance.StepDefinition.login.user_select_sales_brochure_from_unit_linked_plan()</td>
+              <td>1</td>
+              <td class="duration" data-value="820978900">0.820</td>
+              <td class="duration" data-value="820978900">0.820</td>
+              <td class="duration" data-value="820978900">0.820</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">com.insurance.StepDefinition.login.user_select_the_lic_new_endownment_plan()</td>
+              <td>1</td>
+              <td class="duration" data-value="2351509800">2.351</td>
+              <td class="duration" data-value="2351509800">2.351</td>
+              <td class="duration" data-value="2351509800">2.351</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">com.insurance.StepDefinition.login.user_select_the_lic_single_premium_endowment_plan()</td>
+              <td>1</td>
+              <td class="duration" data-value="10285233300">10.285</td>
+              <td class="duration" data-value="10285233300">10.285</td>
+              <td class="duration" data-value="10285233300">10.285</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">com.insurance.StepDefinition.login.user_select_the_sales_brochure()</td>
+              <td>1</td>
+              <td class="duration" data-value="25772400">0.025</td>
+              <td class="duration" data-value="25772400">0.025</td>
+              <td class="duration" data-value="25772400">0.025</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                  </tbody>
+
+        <tfoot class="total">
+          <tr>
+            <td>21</td>
+            <td>27</td>
+            <td class="duration">5.268</td>
+            <td class="duration">1:11.891</td>
+            <td class="duration">2:22.237</td>
+            <td>Totals</td>
+          </tr>
+        </tfoot>
+
+      </table>
+    </div>
+  </div>
+</div>
+
+
+<nav class="navbar navbar-default" id="footer">
+  <div class="container-fluid">
+    <p class="navbar-text navbar-right">
+        <small>generate Cucumber HTML reports via:&nbsp;</small>
+        <a class="navbar-link" href="https://github.com/jenkinsci/cucumber-reports-plugin">Jenkins Plugin</a> |
+        <a class="navbar-link" href="https://github.com/damianszczepanik/cucumber-reporting">Standalone</a> |
+        <a class="navbar-link" href="https://github.com/damianszczepanik/cucumber-sandwich">Sandwich</a> |
+        <a class="navbar-link" href="https://github.com/damianszczepanik/maven-cucumber-reporting">Maven</a>
+        &nbsp;&nbsp;
+    </p>
+  </div>
+</nav>
+
+</body>
+</html>
